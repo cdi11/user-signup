@@ -12,8 +12,8 @@
                 <label for ="username">Username</label>
             </td> 
             <td>   
-                <input type="text" name="username"/>
-                <span class="error" style="color:red;">{{user_error}}</span> 
+                <input type="text" name="username" value='{{request.form['username']}}'/>
+                                <span class="error" style="color:red;">{{user_error}}</span> 
             </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@
                 <label for ="email">Email (optional)</label>
             </td>
             <td>    
-                <input type="text" name="email"/>
+                <input type="text" name="email" value='{{request.form['email']}}'/>
                 <span class="error" style="color:red;">{{email_error}}</span> 
             </td>
         </tr>  

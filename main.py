@@ -42,13 +42,15 @@ def error():
 
     
     else:
+        
         return render_template("welcome.html",username=username)
 
   
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    username= request.args.get("username")
+    return render_template('index.html', username=username) 
 
     # if we have an error, make a <p> to display it
    
